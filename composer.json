@@ -1,12 +1,15 @@
 {
-    "name": "6lab/test-skeleton",
+    "name": "reioto/unittest-skeleton",
     "description": "PHPUnit Skeleton",
+    "keywords": [
+    "phpunit",
+    "testsuit",
+    "unittest"
+    ],
     "type": "project",
     "license": "BSD-3-Clause",
     "require": {
-        "php": ">=5.3.3"
-    },
-    "require-dev": {
-        "phpunit/PHPUnit": ">=3.7.0"
+        "php": ">=5.3.3",
+        "phpunit/phpunit": ">=3.7.0"
     }
 }
