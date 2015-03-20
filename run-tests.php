@@ -3,9 +3,25 @@
 
 chdir(__DIR__);
 
-$phpunit_bin = __DIR__ . '/vendor/bin/phpunit';
-$phpunit_bin = file_exists($phpunit_bin) ? $phpunit_bin : 'phpunit';
-$phpunit_conf = file_exists('phpunit.xml') ? 'phpunit.xml' : 'phpunit.xml.dist';
+$base_path = __DIR__;
+$phpunit_priority = array(
+    $base_path . '/vendor/bin/phpunit',
+    $base_path . '/../vendor/bin/phpunit'
+);
+
+$phpunit_bin = 'phpunit';
+foreach ($phpunit_priority as $path) {
+    if (file_exists($path)) {
+        $phpunit_bin = $path;
+        break;
+    }
+}
+
+$phpunit_conf = $base_path.'/phpunit.xml';
+if (file_exists($phpunit_conf) === false) {
+    $phpunit_conf = $base_path.'/phpunit.xml.dist';
+}
+
 $phpunit_opts = "-c $phpunit_conf";
 
 if (getenv('PHPUNIT_OPTS') !== false) {
