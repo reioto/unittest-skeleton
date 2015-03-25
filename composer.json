@@ -10,6 +10,12 @@
     "license": "BSD-3-Clause",
     "require": {
         "php": ">=5.3.3",
-        "phpunit/phpunit": ">=3.7.0"
+        "phpunit/phpunit": ">=3.7.0",
+        "reioto/zend-db-testcase": "~1.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tests\\": ""
+        }
     }
 }

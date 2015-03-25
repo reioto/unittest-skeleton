@@ -2,11 +2,16 @@
          colors="true" >
     <php>
         <ini name="display_errors" value="1" />
-        <const name="ENVIRONMENT" value="testing" />
+        <const name="ENVIRONMENT" value="unittest" />
+        <env name="DBTYPE" value="Pdo_Mysql" />
+        <env name="DBHOST" value="localhost" />
+        <env name="DBUSER" value="root" />
+        <env name="DBPASSWORD" value="password" />
+        <env name="DBNAME" value="somedbname" />
      </php>
     <testsuites>
         <testsuite name="libTest cases">
-            <directory>./libTest</directory>
+            <directory>./LibTest</directory>
         </testsuite>
     </testsuites>
 </phpunit>

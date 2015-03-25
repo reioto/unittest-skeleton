@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<dataset>
+  <user id="1" user_group_id="1" name="testname" login_id="test" password="test"
+	type_id="1" delete_flag="0" />
+</dataset>
